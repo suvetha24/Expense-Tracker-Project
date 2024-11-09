@@ -1,0 +1,9 @@
+<resources>
+    <string-array name="categories">
+        <item>All</item>
+        <item>Food</item>
+        <item>Transport</item>
+        <item>Accommodation</item>
+        <!-- Add other categories as needed -->
+    </string-array>
+</resources>
