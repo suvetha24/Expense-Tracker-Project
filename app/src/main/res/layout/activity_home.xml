@@ -1,15 +1,73 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
+    <!-- Expense Summary -->
+    <TextView
+        android:id="@+id/total_expenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Expenses: "
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/food_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food: "
+        android:textSize="16sp"
+        android:layout_below="@id/total_expenses"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/transport_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transport: "
+        android:textSize="16sp"
+        android:layout_below="@id/food_total"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/accommodation_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accommodation: "
+        android:textSize="16sp"
+        android:layout_below="@id/transport_total"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"/>
+
+    <!-- RecyclerView for displaying expenses -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/expense_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/accommodation_total"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"/>
+
+    <!-- Category Filter Spinner -->
     <Spinner
-        android:id="@+id/categoryFilter"
+        android:id="@+id/category_filter"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/expense_recycler_view"
+        android:layout_marginTop="16dp"/>
 
-    <RecyclerView
-        android:id="@+id/expenseRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+    <!-- Floating Action Button to add expense -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_add"
+        android:contentDescription="Add Expense"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"/>
+</RelativeLayout>
