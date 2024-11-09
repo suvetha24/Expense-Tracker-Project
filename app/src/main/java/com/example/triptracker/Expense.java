@@ -1,43 +1,60 @@
-// Expense.java
 package com.example.triptracker;
 
 public class Expense {
+
     private String id;
     private String name;
-    private double cost;
+    private double amount;
     private String category;
-    private int day, month, year;
+    private String date;
 
-    // Default constructor required for calls to DataSnapshot.getValue(Expense.class)
-    public Expense() {}
-
-    public Expense(String name, double cost, String category, int day, int month, int year) {
-        this.name = name;
-        this.cost = cost;
-        this.category = category;
-        this.day = day;
-        this.month = month;
-        this.year = year;
+    public Expense() {
     }
 
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
+    public Expense(String name, double amount, String category, String date) {
+        this.name = name;
+        this.amount = amount;
+        this.category = category;
+        this.date = date;
+    }
 
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public String getId() {
+        return id;
+    }
 
-    public double getCost() { return cost; }
-    public void setCost(double cost) { this.cost = cost; }
+    public void setId(String id) {
+        this.id = id;
+    }
 
-    public String getCategory() { return category; }
-    public void setCategory(String category) { this.category = category; }
+    public String getName() {
+        return name;
+    }
 
-    public int getDay() { return day; }
-    public void setDay(int day) { this.day = day; }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public int getMonth() { return month; }
-    public void setMonth(int month) { this.month = month; }
+    public double getAmount() {
+        return amount;
+    }
 
-    public int getYear() { return year; }
-    public void setYear(int year) { this.year = year; }
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 }
