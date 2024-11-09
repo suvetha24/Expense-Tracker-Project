@@ -11,6 +11,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import java.util.ArrayList;
 import java.util.List;
+import android.widget.AdapterView;
+import android.view.View;
+
+
 
 public class HomeActivity extends AppCompatActivity {
     private Spinner categoryFilter;
